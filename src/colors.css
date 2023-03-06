@@ -1,0 +1,18 @@
+:root {
+  --Grey100:#F8F8FF;
+  --Grey200:#EAEAEA;
+  --Pink100:#FF7AD7;
+  --Blue100:#2B2C34;
+  --Blue200:#121214;
+  --Yellow100:#FFD94B;
+  --Red100:#E45858;
+  --Purple100:#6246EA;
+  --White100:#FFFFFF;
+  --Black100:rgba(0, 0, 0, 0.75);
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}

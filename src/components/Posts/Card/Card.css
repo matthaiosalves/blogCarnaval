@@ -1,0 +1,41 @@
+.cardBlogPostsCol {
+  padding: 0;
+  width: 384px;
+  max-width: 100%;
+
+  margin-top: 40px;
+}
+.cardBlogPostsCol .card {
+  background: var(--White100);
+  border: 1px solid var(--Grey200);
+  border-radius: 10px;
+}
+.cardBlogPostsCol .card .card-title {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+
+  color: var(--Blue200);
+}
+.cardBlogPostsCol .card .card-text {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--Black100);
+}
+.cardBlogPostsCol .card .local {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+
+  color: var(--Black100);
+  text-decoration: none;
+}
+@media (max-width: 1190px) {
+  .cardBlogPostsCol {
+    width: 100%;
+  }
+}

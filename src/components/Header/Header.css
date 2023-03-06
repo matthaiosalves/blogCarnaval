@@ -1,0 +1,105 @@
+.header {
+  background-color:var(--Grey100);
+  min-height: 532px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 25px;
+}
+.header .container-fluid {
+  max-width: 993px;
+  width: 100%;
+}
+.header .container-fluid .findYourBlock {
+  margin-bottom: 8px;
+}
+.header .container-fluid .findYourBlock p {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  text-align: center;
+
+  color: var(--Red100);
+  margin: 0;
+}
+.header .container-fluid .encontreOsMelhores {
+  max-width: 647px;
+  width: 100%;
+  margin: 0 auto;
+}
+.header .container-fluid .encontreOsMelhores h3,
+.header .container-fluid .encontreOsMelhores span {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+
+  line-height: 60px;
+  margin: 0;
+}
+.header .container-fluid .encontreOsMelhores h3 {
+  color: var(--Blue100);
+}
+.header .container-fluid .encontreOsMelhores span {
+  color: var(--Purple100);
+}
+.header .container-fluid .selectNameAndCity {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 23px;
+
+  background-color: var(--White100);
+  border: 1px solid var(--Grey200);
+
+  padding: 40px;
+
+  border-radius: 10px;
+
+  margin-top: 40px;
+}
+.header .container-fluid .selectNameAndCity .form-group,
+.header .container-fluid .selectNameAndCity .form-group select,
+.header .container-fluid .selectNameAndCity .form-group input {
+  width: 348px;
+  max-width: 100%;
+  height: 48px;
+
+   cursor: pointer;
+}
+.header .container-fluid .selectNameAndCity .btnSearch {
+  width: 169px;
+  max-width: 100%;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 5px;
+
+  background-color: var(--Purple100);
+
+  text-transform: uppercase;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+
+  color: var(--White100);
+}
+
+@media (max-width: 998px) {
+  .header .container-fluid .selectNameAndCity .form-group,
+  .header .container-fluid .selectNameAndCity .form-group select,
+  .header .container-fluid .selectNameAndCity .btnSearch {
+    width: 100%;
+  }
+}
