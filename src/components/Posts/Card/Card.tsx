@@ -8,7 +8,7 @@ interface CardProps {
     rendered: string;
   };
   image: string;
-  _embedded: {
+  _embedded?: {
     'wp:featuredmedia': {
       media_details: {
         sizes: {

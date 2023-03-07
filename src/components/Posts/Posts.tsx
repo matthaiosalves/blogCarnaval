@@ -12,7 +12,7 @@ interface CardProps {
     rendered: string;
   };
   image: string;
-  _embedded: {
+  _embedded?: {
     'wp:featuredmedia': {
       media_details: {
         sizes: {
@@ -34,10 +34,16 @@ const Posts = () => {
         const response = await axios.get<CardProps[]>(
           "https://www.tvgazeta.com.br/wp-json/wp/v2/posts?_embed"
         );
-        const modifiedData = response.data.map((post) => ({
-          ...post,
-          image: post._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url,
-        }));
+        const modifiedData = response.data.map((post) => {
+          const image =
+            post._embedded && post._embedded["wp:featuredmedia"]
+              ? post._embedded["wp:featuredmedia"][0]?.media_details?.sizes?.medium_large?.source_url ?? ''
+              : '';
+          return {
+            ...post,
+            image
+          };
+        });
         setCardsData(modifiedData);
       } catch (error) {
         console.error(error);
