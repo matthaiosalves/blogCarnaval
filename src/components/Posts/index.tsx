@@ -27,6 +27,7 @@ export type CardProps = {
 
 const Posts = () => {
   const [cardsData, setCardsData] = useState<CardProps[]>([]);
+  const URL_NOT_FOUND = 'https://static.tvgazeta.com.br/uploads/2015/05/m_logo_gazeta.png';
 
   useEffect(() => {
     async function fetchData() {
@@ -37,9 +38,7 @@ const Posts = () => {
         );
         const modifiedData = response.data.map((post) => {
           const image =
-            post._embedded && post._embedded["wp:featuredmedia"]
-              ? post._embedded["wp:featuredmedia"][0]?.media_details?.sizes?.medium_large?.source_url ?? ''
-              : '';
+            post._embedded && post._embedded["wp:featuredmedia"] ? post._embedded["wp:featuredmedia"][0]?.media_details?.sizes?.medium_large?.source_url ?? URL_NOT_FOUND : '';
           return {
             ...post,
             image
