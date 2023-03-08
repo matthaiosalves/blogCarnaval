@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 const Header = () => {
   const [nameCity, setNameCity] = useState('');
+  const [selectCity, setSelectCity] = useState('');
 
   return (
     <header className="header">
@@ -30,7 +31,12 @@ const Header = () => {
             </div>
             <div className="form-group">
               <select className="form-control" name="" id="">
-                <option value="" selected disabled>Selecione uma cidade</option>
+                <option 
+                  value={selectCity}
+                  onChange={(e) => setSelectCity('')}
+                  selected 
+                  disabled
+                >Selecione uma cidade</option>
               </select>
             </div>
             <a href="" className="btn btnSearch">Buscar agora</a>
