@@ -30,13 +30,14 @@ const Header = () => {
               />
             </div>
             <div className="form-group">
-              <select className="form-control" name="" id="">
-                <option 
-                  value={selectCity}
-                  onChange={(e) => setSelectCity('')}
-                  selected 
-                  disabled
-                >Selecione uma cidade</option>
+              <select 
+                className="form-control" 
+                name="" 
+                id=""
+                value={selectCity}
+                onChange={(e) => setSelectCity(e.target.value)}
+              >
+                <option selected disabled>Selecione uma cidade</option>
               </select>
             </div>
             <a href="" className="btn btnSearch">Buscar agora</a>
