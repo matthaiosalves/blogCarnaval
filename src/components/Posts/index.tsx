@@ -1,9 +1,9 @@
-import Card from './Card/Card';
+import Card from './Card';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
-interface CardProps {
-  id: number;
+export type CardProps = {
+  id?: number;
   link: string;
   title: {
     rendered: string;
@@ -31,6 +31,7 @@ const Posts = () => {
   useEffect(() => {
     async function fetchData() {
       try {
+        console.log('Glauber')
         const response = await axios.get<CardProps[]>(
           "https://www.tvgazeta.com.br/wp-json/wp/v2/posts?_embed"
         );
@@ -71,8 +72,8 @@ const Posts = () => {
           <div className="contentBlogPosts">
             <div className="container-fluid">
               <div className="row justify-content-between">
-                {cardsData.map((card: CardProps, index: number) => (
-                  <Card key={index} title={card.title} excerpt={card.excerpt} image={card.image} link={card.link} id={card.id}/>
+                {cardsData.map((card: CardProps) => (
+                  <Card key={card.id} title={card.title} excerpt={card.excerpt} image={card.image} link={card.link}  />
                 ))}
               </div>
             </div>

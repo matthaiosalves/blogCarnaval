@@ -1,4 +1,8 @@
+import { useState } from 'react';
+
 const Header = () => {
+  const [nameCity, setNameCity] = useState('');
+
   return (
     <header className="header">
       <div className="container-fluid">
@@ -14,7 +18,15 @@ const Header = () => {
 
           <div className="selectNameAndCity">
             <div className="form-group">
-              <input className="form-control" name="" id="" type="text" placeholder="Pesquise por nome"/>
+              <input 
+                className="form-control" 
+                value={nameCity}
+                onChange={(e) => setNameCity(e.target.value)}
+                name="" 
+                id="" 
+                type="text" 
+                placeholder="Pesquise por nome" 
+              />
             </div>
             <div className="form-group">
               <select className="form-control" name="" id="">
