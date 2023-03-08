@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import primeiraIlustracao from '../../images/ilustra-01.svg';
+import segundaIlustracao from '../../images/ilustra-02.svg';
 
 const Header = () => {
   const [nameCity, setNameCity] = useState('');
@@ -8,6 +10,9 @@ const Header = () => {
     <header className="header">
       <div className="container-fluid">
         <div className="row">
+
+          <img className="primeiraIlustracao" src={primeiraIlustracao} alt="Primeira ilustração a esquerda" />
+          <img className="segundaIlustracao" src={segundaIlustracao} alt="Segunda ilustração a direita"/>
 
           <div className="findYourBlock">
             <p>find your block</p>
@@ -42,6 +47,7 @@ const Header = () => {
             </div>
             <a href="" className="btn btnSearch">Buscar agora</a>
           </div>
+          
         </div>
       </div>
     </header>

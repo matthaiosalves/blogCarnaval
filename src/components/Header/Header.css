@@ -6,10 +6,29 @@
   align-items: center;
 
   padding: 25px;
+
+  position: relative;
+  overflow: hidden;
 }
 .header .container-fluid {
   max-width: 993px;
   width: 100%;
+
+  position: relative;
+}
+.header .container-fluid .primeiraIlustracao {
+  position: absolute;
+  left: -47%;
+  top: -33%;
+  max-width: 407px;
+  width: 100%;
+}
+.header .container-fluid .segundaIlustracao {
+  position: absolute;
+  max-width: 414px;
+  width: 100%;
+  top: 40%;
+  right: -47%;
 }
 .header .container-fluid .findYourBlock {
   margin-bottom: 8px;
