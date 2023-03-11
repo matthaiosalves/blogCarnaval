@@ -27,6 +27,7 @@ export type CardProps = {
 
 const Posts = () => {
   const [cardsData, setCardsData] = useState<CardProps[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   const URL_NOT_FOUND = 'https://static.tvgazeta.com.br/uploads/2015/05/m_logo_gazeta.png';
 
   useEffect(() => {
@@ -44,6 +45,7 @@ const Posts = () => {
           };
         });
         setCardsData(modifiedData);
+        setIsLoading(false);
       } catch (error) {
         console.error(error);
       }
@@ -70,9 +72,19 @@ const Posts = () => {
           <div className="contentBlogPosts mb-5">
             <div className="container-fluid">
               <div className="row justify-content-between">
-                {cardsData.map((card: CardProps) => (
-                  <Card key={card.id} title={card.title} excerpt={card.excerpt} image={card.image} link={card.link}  />
-                ))}
+                {
+                  isLoading ? (
+                    <div className="text-center mt-5">
+                      <div className="spinner-border" style={{ width: '3rem', height: '3rem' }} role="status">
+                        <span className="visually-hidden">Carregando...</span>
+                      </div>
+                    </div>
+                  ) : (
+                    cardsData.map((card: CardProps) => (
+                      <Card key={card.id} title={card.title} excerpt={card.excerpt} image={card.image} link={card.link}  />
+                    ))
+                  )
+                }
               </div>
             </div>
           </div>
