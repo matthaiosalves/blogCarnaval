@@ -68,7 +68,7 @@ const Posts = () => {
               </div>
             </div>
           </div>
-          <div className="contentBlogPosts">
+          <div className="contentBlogPosts mb-5">
             <div className="container-fluid">
               <div className="row justify-content-between">
                 {cardsData.map((card: CardProps) => (
