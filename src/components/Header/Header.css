@@ -115,6 +115,29 @@
   color: var(--White100);
 }
 
+@media (max-width: 1440px) {
+  .header .container-fluid .primeiraIlustracao {
+    position: absolute;
+    left: -24%;
+    top: -33%;
+    max-width: 407px;
+    width: 100%;
+  }
+  .header .container-fluid .segundaIlustracao {
+    position: absolute;
+    max-width: 414px;
+    width: 100%;
+    top: 40%;
+    right: -24%;
+  }
+}
+@media (max-width: 1024px) {
+  .header .container-fluid .primeiraIlustracao,
+  .header .container-fluid .segundaIlustracao {
+    display: none;
+  }
+
+}
 @media (max-width: 998px) {
   .header .container-fluid .selectNameAndCity .form-group,
   .header .container-fluid .selectNameAndCity .form-group select,
