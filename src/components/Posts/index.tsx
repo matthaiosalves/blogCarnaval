@@ -32,7 +32,6 @@ const Posts = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        console.log('Glauber')
         const response = await axios.get<CardProps[]>(
           "https://www.tvgazeta.com.br/wp-json/wp/v2/posts?_embed"
         );

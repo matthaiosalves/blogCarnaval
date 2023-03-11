@@ -1,10 +1,22 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import primeiraIlustracao from '../../images/ilustra-01.svg';
 import segundaIlustracao from '../../images/ilustra-02.svg';
+import estadosJson from '../../api/estados.json';
+
+export type Estado = {
+  id?: number;
+  nome: string;
+  sigla: string;
+}
 
 const Header = () => {
   const [nameCity, setNameCity] = useState('');
   const [selectCity, setSelectCity] = useState('');
+  const [estados, setEstados] = useState<Estado[]>([]);
+
+  useEffect(() => {
+    setEstados(estadosJson.UF);
+  }, []);
 
   return (
     <header className="header">
@@ -42,7 +54,16 @@ const Header = () => {
                 value={selectCity}
                 onChange={(e) => setSelectCity(e.target.value)}
               >
-                <option selected disabled>Selecione uma cidade</option>
+                <option>
+                  Selecione uma cidade
+                </option>
+                {
+                  estados.map((estado, index) => (
+                    <option key={index} value={estado.id}>
+                      {estado.nome}
+                    </option>
+                  ))
+                }
               </select>
             </div>
             <a href="" className="btn btnSearch">Buscar agora</a>
