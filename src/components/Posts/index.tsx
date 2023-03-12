@@ -28,7 +28,11 @@ export type CardProps = {
 const Posts = () => {
   const [cardsData, setCardsData] = useState<CardProps[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [isActiveButton, setIsActiveButton] = useState<number>(1);
+
   const URL_NOT_FOUND = 'https://static.tvgazeta.com.br/uploads/2015/05/m_logo_gazeta.png';
+
+  const handleClickActiveButton = (button: number) => {setIsActiveButton(button)}
 
   useEffect(() => {
     async function fetchData() {
@@ -64,8 +68,8 @@ const Posts = () => {
             </div>
             <div className="buttonsFilterBlogPosts">
               <div className="buttons">
-                <a className="lista active" href="#">Lista</a>
-                <a className="mapa" href="#">Mapa</a>
+                <a className={isActiveButton === 1 ? 'lista active' : 'lista'} onClick={() => handleClickActiveButton(1)} href="#">Lista</a>
+                <a className={isActiveButton === 2 ? 'mapa active' : 'mapa'} onClick={() => handleClickActiveButton(2)} href="#">Mapa</a>
               </div>
             </div>
           </div>
