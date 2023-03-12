@@ -141,7 +141,8 @@
 @media (max-width: 998px) {
   .header .container-fluid .selectNameAndCity .form-group,
   .header .container-fluid .selectNameAndCity .form-group select,
-  .header .container-fluid .selectNameAndCity .btnSearch {
+  .header .container-fluid .selectNameAndCity .btnSearch,
+  .header .container-fluid .selectNameAndCity .form-group input {
     width: 100%;
   }
 }
