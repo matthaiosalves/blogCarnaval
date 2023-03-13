@@ -1,29 +1,9 @@
 import Card from './Card';
 import axios from 'axios';
+import { CardProps } from '../../interfaces/PostsBlog';
 import { useState, useEffect } from 'react';
 
-export type CardProps = {
-  id?: number;
-  link: string;
-  title: {
-    rendered: string;
-  };
-  excerpt: {
-    rendered: string;
-  };
-  image: string;
-  _embedded?: {
-    'wp:featuredmedia': {
-      media_details: {
-        sizes: {
-          medium_large: {
-            source_url: string;
-          }
-        }
-      }
-    }[]
-  };
-}
+
 
 const Posts = () => {
   const [cardsData, setCardsData] = useState<CardProps[]>([]);
@@ -73,6 +53,7 @@ const Posts = () => {
               </div>
             </div>
           </div>
+
           <div className="contentBlogPosts mb-5">
             <div className="container-fluid">
               <div className="row justify-content-between">

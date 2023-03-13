@@ -1,4 +1,4 @@
-import { CardProps } from '../';
+import { CardProps } from "../../../interfaces/PostsBlog";
 
 const Card = ({ title, excerpt, link, image }: CardProps) => {
   return (
