@@ -1,5 +1,5 @@
-@import url('./components/Header/Header.css');
-@import url('./components/Posts/Posts.css');
-@import url('./components/Posts/Card/Card.css');
+@import url('./components/Header/styles.css');
+@import url('./components/Posts/styles.css');
+@import url('./components/Posts/Card/styles.css');
 @import url('./colors.css');
 @import url('./normalize.css');
