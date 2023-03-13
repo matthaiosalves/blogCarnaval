@@ -2,12 +2,7 @@ import { useEffect, useState } from 'react';
 import primeiraIlustracao from '../../images/ilustra-01.svg';
 import segundaIlustracao from '../../images/ilustra-02.svg';
 import estadosJson from '../../api/estados.json';
-
-export type Estado = {
-  id?: number;
-  nome: string;
-  sigla: string;
-}
+import { Estado } from '../../interfaces/PostsBlog';
 
 const Header = () => {
   const [nameCity, setNameCity] = useState('');
